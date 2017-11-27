@@ -16,13 +16,15 @@ describe("Transaction", function() {
     expect(transaction._date).toEqual(date);
   });
 
-  it("can debit an account balance", function() {
+  it("can debit an account balance, making the transaction a debit type", function() {
     transaction.debit(500);
     expect(account._balance).toEqual(500);
+    expect(transaction._type).toEqual("debit");
   });
 
   it("can credit an account balance", function() {
     transaction.credit(500);
     expect(account._balance).toEqual(0);
+    expect(transaction._type).toEqual("credit");
   });
 });
