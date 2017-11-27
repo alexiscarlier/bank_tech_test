@@ -1,11 +1,16 @@
 describe("Account", function() {
-  it("has a balance of 0 by default", function() {
+
+  beforeEach(function() {
     transactions = []
     account = new Account(transactions);
+  });
+
+
+  it("has a balance of 0 by default", function() {
     expect(account._balance).toEqual(0);
   });
-});
 
-afterEach(function() {
-    // account.delete();
+  it("is instantiated with transactions", function() {
+    expect(account._transactions).toEqual(transactions);
   });
+});

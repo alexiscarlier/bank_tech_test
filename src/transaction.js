@@ -6,6 +6,10 @@
     this._amount = null;
   }
 
+  Transaction.prototype.getDate = function() {
+    return this._date;
+  }
+
   Transaction.prototype.debit = function(amount) {
     this._type = "debit";
     this._amount = amount;

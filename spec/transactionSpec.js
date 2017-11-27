@@ -11,9 +11,12 @@ describe("Transaction", function() {
 
 
 
-  it("is instantiated with a date and an account", function() {
-    // expect(transaction._account).toEqual(account);
+  it("is instantiated with a date", function() {
     expect(transaction._date).toEqual(date);
+  });
+
+  it("has a date getter method", function() {
+    expect(transaction.getDate()).toEqual(date);
   });
 
   it("can debit an account balance, making the transaction a debit type", function() {
