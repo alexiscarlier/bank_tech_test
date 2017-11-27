@@ -4,3 +4,7 @@ describe("Account", function() {
     expect(account._balance).toEqual(0);
   });
 });
+
+afterEach(function() {
+    // account.delete();
+  });
