@@ -27,7 +27,7 @@
   }
 
   Transaction.prototype.setAsCredit = function() {
-    this._type = "debit";
+    this._type = "credit";
   }
 
   // Transaction.prototype.debit = function(amount) {

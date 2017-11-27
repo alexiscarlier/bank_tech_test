@@ -20,4 +20,12 @@ describe("Account", function() {
     expect(account._balance).toEqual(500);
     expect(account._transactions[0]).toEqual(account._transaction);
   });
+
+  it("has a credit method which updates transaction properties", function() {
+    account.credit(500);
+    expect(account._transaction.getType()).toEqual("credit");
+    expect(account._transaction.getAmount()).toEqual(500);
+    expect(account._balance).toEqual(-500);
+    expect(account._transactions[0]).toEqual(account._transaction);
+  });
 });

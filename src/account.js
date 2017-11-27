@@ -18,15 +18,14 @@
     this._transaction.setAmount(amount);
     this._balance += amount;
     this._transactions.push(this._transaction);
-    // transactions should already have a date
   }
 
-  // Account.prototype.credit = function(amount) {
-  //   this._transaction.setAsCredit();
-  //   this._transaction.setAmount(amount);
-  //   this._balance -= amount
-  //   this._transactions.push(this._transaction);
-  // }
+  Account.prototype.credit = function(amount) {
+    this._transaction.setAsCredit();
+    this._transaction.setAmount(amount);
+    this._balance -= amount
+    this._transactions.push(this._transaction);
+  }
 
   exports.Account = Account;
 })(this);
