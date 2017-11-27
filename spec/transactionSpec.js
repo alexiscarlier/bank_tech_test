@@ -19,15 +19,15 @@ describe("Transaction", function() {
     expect(transaction.getDate()).toEqual(date);
   });
 
-  it("can debit an account balance, making the transaction a debit type", function() {
-    transaction.debit(500);
-    expect(transaction._type).toEqual("debit");
-    expect(transaction._amount).toEqual(500)
-  });
-
-  it("can credit an account balance", function() {
-    transaction.credit(500);
-    expect(transaction._type).toEqual("credit");
-    expect(transaction._amount).toEqual(500);
-  });
+  // it("can debit an account balance, making the transaction a debit type", function() {
+  //   transaction.debit(500);
+  //   expect(transaction._type).toEqual("debit");
+  //   expect(transaction._amount).toEqual(500)
+  // });
+  //
+  // it("can credit an account balance", function() {
+  //   transaction.credit(500);
+  //   expect(transaction._type).toEqual("credit");
+  //   expect(transaction._amount).toEqual(500);
+  // });
 });
